@@ -96,10 +96,7 @@
                 <a class="nav-link" href="https://www.google.com/maps/place/PT+INTI+(Persero)/@-6.9382888,107.6049756,17z/data=!3m1!4b1!4m5!3m4!1s0x2e68e89a850f0c27:0xf966f17f27fca922!8m2!3d-6.9382941!4d107.6071643" target="_blank"
                 class="text-primary"> Maps </a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="<?php echo base_url('loginc') ?>" target="_blank"
-                class="text-primary"> Login </a>
-              </li>
+        
             </ul>
 
           
