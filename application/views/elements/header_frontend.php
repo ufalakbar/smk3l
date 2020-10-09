@@ -7,17 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="<?php echo base_url('uploads/img/'.config_web('icon')) ?>" rel="shortcut icon">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Oxygen:400,700" rel="stylesheet">
-
     <link rel="stylesheet" href="<?= base_url()?>templates/css/animate.css">
     <link rel="stylesheet" href="<?= base_url()?>templates/css/owl.carousel.min.css">
     <link rel="stylesheet" href="<?= base_url()?>templates/css/jquery.fancybox.min.css">
-
     <link rel="stylesheet" href="<?= base_url()?>templates/fonts/ionicons/css/ionicons.min.css">
     <link rel="stylesheet" href="<?= base_url()?>templates/fonts/fontawesome/css/font-awesome.min.css">
-
-    <!-- Theme Style -->
     <link rel="stylesheet" href="<?= base_url()?>templates/css/style.css">
-
   </head>
   <body>
     

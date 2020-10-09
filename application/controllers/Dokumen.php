@@ -19,8 +19,6 @@ class dokumen extends CI_Controller {
         // echo base_url();
         // exit;
         $data=array(
-            'headerTitle'=>'Pengaturan',
-            'formTitle'=>'Form Pengaturan',
             'pageTitle'=>$this->Adminm->get_kategori($id),
             'active_pengaturan'=>'active',            
             'data_dokumen'=>$this->Adminm->get_dokumen_kategori($id),

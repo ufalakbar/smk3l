@@ -26,7 +26,7 @@
             <!-- /.box-header -->
             <div class="box-body">
               <table id="example1" class="table table-bordered table-striped">
-                <h3>contoh peerubahan</h3>
+                
                 <thead>
                   <tr>
                       <th>No</th>

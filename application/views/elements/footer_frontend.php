@@ -3,21 +3,12 @@
         <div class="row">
           <div class="col-12 text-md-center text-left">
              <p>
-              <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+              
               Copyright &copy;
               <script>document.write(new Date().getFullYear());</script> <span> PT.INTI | Industri Telekomunikasi Indonesia
-              <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+              
             </p>
           </div>
-          <!-- <div class="col-12 text-md-center text-left">
-            <ul class="social-network">
-              <li><a href="#" data-placement="top" title="Facebook"><i class="fa fa-facebook"></i></a></li>
-              <li><a href="#" data-placement="top" title="Twitter"><i class="fa fa-twitter"></i></a></li>
-              <li><a href="#" data-placement="top" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
-              <li><a href="#" data-placement="top" title="Pinterest"><i class="fa fa-pinterest"></i></a></li>
-              <li><a href="#" data-placement="top" title="Youtube"><i class="fa fa-youtube"></i></a></li>
-            </ul>
-          </div> -->
         </div>
       </div>
     </footer>

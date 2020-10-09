@@ -36,8 +36,10 @@ class Pengaturanc extends CI_Controller {
             'email'=>$this->input->post('email'),
             'phone_number'=>$this->input->post('phone_number'),
             'fax'=>$this->input->post('fax'),
-            'keywords'=>$this->input->post('keywords'),
-            'metatext'=>$this->input->post('metatext'),
+            'manager'=>$this->input->post('manager'),
+            'alamat'=>$this->input->post('alamat'),
+            'fb'=>$this->input->post('fb'),
+            'instagram'=>$this->input->post('instagram'),
             'about'=>$this->input->post('about'),
             'narasi_qrm'=>$this->input->post('narasi_qrm'),
         );
@@ -153,36 +155,5 @@ class Pengaturanc extends CI_Controller {
         );
         $this->Adminm->updateData('tbl_config',$data,$id);
         redirect("pengaturanc/lokasi");
-    }
-
-/*===========================================================================================================================================*/
-/*===========================================================================================================================================*/
-
-    public function social_media()
-    {
-        $id_config['config_id']= 1;
-        $data=array(
-            'headerTitle'=>'Pengaturan',
-            'formTitle'=>'Form Pengaturan',
-
-            'active_pengaturan'=>'active',            
-            'data_config'=>$this->Adminm->getSelectedData('tbl_config',$id_config),
-        );
-        $this->load->view('elements/header', $data);
-        $this->load->view('pages/pengaturan/social_media');
-        $this->load->view('elements/footer');
-    }
-
-    function proses_data_social_media() {
-        $id['config_id'] = 1;
-        $data=array(
-            'facebook'=>$this->input->post('facebook'),
-            'twitter'=>$this->input->post('twitter'),
-            'instagram'=>$this->input->post('instagram'),
-            'google_plus'=>$this->input->post('google_plus'),
-            'youtube'=>$this->input->post('youtube'),
-        );
-        $this->Adminm->updateData('tbl_config',$data,$id);
-        redirect("pengaturanc/social_media");
     }
 }

@@ -6,8 +6,8 @@
         <div class="container">
           <div class="row slider-text align-items-center justify-content-center">
             <div class="col-md-8 text-center col-sm-12 element-animate pt-5">
-              <h1 class="pt-5"><span>Apaitu P2K3 ? ? </span></h1>
-              <p class="mb-5 w-75 pl-0">Riwayat Singkat Perusahaan</p>
+              <h1 class="pt-5"><span>Apa Itu P2K3 ? ? </span></h1>
+              <p class="mb-5 w-75 pl-0">Panitia Pembina Keselamatan dan Kesehatan Kerja </p>
             </div>
           </div>
         </div>

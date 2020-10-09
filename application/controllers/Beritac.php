@@ -159,7 +159,7 @@ class Beritac extends CI_Controller {
 
 	        $data=array(
 	            'headerTitle'=>'Data Kategori Berita',
-	            'formTitle'=>'Form Tambah Berita',
+	            'formTitle'=>'Form Tambah Kategori Berita',
 
 	            'active_berita'=>'active',            
 	            'id'=>$this->Adminm->id_kategori_berita(),

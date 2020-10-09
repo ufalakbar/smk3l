@@ -73,8 +73,7 @@
                         <option value="Cover Depan">Cover Depan</option>
                         <option value="Profile Perusahaan">Profile Perusahaan</option>
                         <option value="Narasi Tentang QRM">Narasi Tentang QRM</option>
-                        <option value="Struktur Organisasi QRM">Struktur Organisasi QRM</option>
-                        <option value="Personalia QRM">Personalia QRM</option>
+                        <option value="Struktur Organisasi QRM">Struktur QRM Baru</option>
                     </select>
                   </div>
 

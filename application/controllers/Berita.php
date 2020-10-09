@@ -17,12 +17,9 @@ class Berita extends CI_Controller {
 	public function index()
 	{
         $data=array(
-            'headerTitle'=>'Pengaturan',
-            'formTitle'=>'Form Pengaturan',
-
             'active_pengaturan'=>'active',            
-            'data_berita'=>$this->Adminm->get_all_berita(),
-            'data_kategori'=>$this->Adminm->getAllData('tbl_kategori_berita'),
+            'data_berita'=>$this->Adminm->get_all_berita(), //menampilkan semua berita pada halaman user
+            'data_kategori'=>$this->Adminm->getAllData('tbl_kategori_berita'), //menampilkan semua data pada tabel kategori berita
         );
         $this->load->view('elements/header_frontend', $data);
 		$this->load->view('pages/frontend/berita', $data);
@@ -32,9 +29,6 @@ class Berita extends CI_Controller {
     public function kategori($id_kategori_berita)
     {
         $data=array(
-            'headerTitle'=>'Pengaturan',
-            'formTitle'=>'Form Pengaturan',
-
             'active_pengaturan'=>'active',            
             'data_berita'=>$this->Adminm->get_kategori_berita($id_kategori_berita),
             'data_kategori'=>$this->Adminm->getAllData('tbl_kategori_berita'),

@@ -126,9 +126,8 @@
                 <p>Dalam melaksanakan proses bisnisnya, PT. INTI (persero) menyadari tugas dan tanggung jawabnya </p>
               </div>
             </div>
-
+            
           </div>
-
         </div>
       </div>
     </section>

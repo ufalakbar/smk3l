@@ -1,11 +1,9 @@
-  <footer class="main-footer">
-    <div class="pull-right hidden-xs">
-      <b>Version</b> 1.0.0
-    </div>
-    <strong>Copyright &copy; 2020 Team Project.</strong> All rights
-    reserved.
-  </footer>
-  <div class="control-sidebar-bg"></div>
+<footer class="main-footer">
+  <div class="pull-right hidden-xs">
+  </div>
+    <strong>Copyright &copy; 2020 PT. Industri Telekomunikasi (Persero) Bandung.</strong>
+</footer>
+<div class="control-sidebar-bg"></div>
 </div>
 <!-- ./wrapper -->
 
@@ -66,7 +64,6 @@
 
 <script src="<?php echo base_url('assets/admin/chart/dist/Chart.bundle.js')?>"></script>
 <script src="<?php echo base_url('assets/admin/chart/utils.js')?>"></script>
-
 
 </body>
 </html>

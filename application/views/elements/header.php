@@ -55,47 +55,7 @@
  -->
       <div class="navbar-custom-menu">
         <ul class="nav navbar-nav">
-          <!-- User Account: style can be found in dropdown.less -->
-          <!-- 
-
-          <li class="dropdown user user-menu">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              <img src="<?php echo base_url('assets/admin/dist/img/user2-160x160.png')?>" class="user-image" alt="User Image">
-              <span class="hidden-xs"><?php echo $this->session->userdata('NAME'); ?></span>
-            </a>
-            <ul class="dropdown-menu">
-              <li class="user-header">
-                <img src="<?php echo base_url('assets/admin/dist/img/user2-160x160.png')?>" class="img-circle" alt="User Image">
-
-                <p>
-                  <?php echo $this->session->userdata('NAME'); ?> 
-                  <small>Apps Passport</small>
-                </p>
-              </li>
-              <li class="user-body">
-                <div class="row">
-                  <div class="col-xs-4 text-center">
-                    <a href="#">Followers</a>
-                  </div>
-                  <div class="col-xs-4 text-center">
-                    <a href="#">Sales</a>
-                  </div>
-                  <div class="col-xs-4 text-center">
-                    <a href="#">Friends</a>
-                  </div>
-                </div>
-              </li>
-              <li class="user-footer">
-                <div class="pull-left">
-                  <a href="#" class="btn btn-default btn-flat">Profile</a>
-                </div>
-                <div class="pull-right">
-                  <a href="<?php echo base_url('loginc/logout')?>" class="btn btn-default btn-flat">Sign out</a>
-                </div>
-              </li>
-            </ul>
-             -->
-          </li>
+          
         </ul>
       </div>
     </nav>
@@ -127,10 +87,10 @@
       <!-- /.search form -->
       <!-- sidebar menu: : style can be found in sidebar.less -->
       <ul class="sidebar-menu" data-widget="tree">
-        <li class="header">MAIN NAVIGATION</li>
+        <li class="header">MENU UTAMA</li>
         <li class="<?php if (isset($active_dashboard)) { echo $active_dashboard; } ?>">
           <a href="<?php echo base_url('dashboardc')?>">
-            <i class="fa fa-dashboard"></i> <span>Home</span>
+            <i class="fa fa-home"></i> <span>Home</span>
           </a>
         </li>
         <li class="treeview <?php if (isset($active_pengaturan)) { echo $active_pengaturan; } ?>">
@@ -150,12 +110,6 @@
               </a>
               <a href="<?php echo base_url('pengaturanc/icon')?>"><i class="fa fa-circle-o"></i>
                 Icon
-              </a>
-              <a href="<?php echo base_url('pengaturanc/lokasi')?>"><i class="fa fa-circle-o"></i>
-                Lokasi
-              </a>
-              <a href="<?php echo base_url('pengaturanc/social_media')?>"><i class="fa fa-circle-o"></i>
-                Social Media
               </a>
             </li>
           </ul>
@@ -204,7 +158,7 @@
         
         <li class="treeview <?php if (isset($active_dokumen)) { echo $active_dokumen; } ?>">
           <a href="#">
-            <i class="fa fa-book"></i> <span>Dokumen</span>
+            <i class="fa fa-folder"></i> <span>Dokumen</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
@@ -225,7 +179,7 @@
         </li>
         <li class="treeview <?php if (isset($active_laporan)) { echo $active_laporan; } ?>">
           <a href="#">
-            <i class="fa fa-book"></i> <span>Laporan</span>
+            <i class="fa fa-bar-chart"></i> <span>Laporan</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
@@ -246,7 +200,7 @@
         </li>
         <li class="treeview <?php if (isset($active_media)) { echo $active_media; } ?>">
           <a href="#">
-            <i class="fa fa-star"></i> <span>Media</span>
+            <i class="fa fa-camera"></i> <span>Media</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
@@ -254,7 +208,7 @@
           <ul class="treeview-menu">
             <li>
               <a href="<?php echo base_url('mediac')?>"><i class="fa fa-circle-o"></i>
-                Cover Web
+                Daftar Media
               </a>
               <a href="<?php echo base_url('fotoc')?>"><i class="fa fa-circle-o"></i>
                 Foto
@@ -266,9 +220,9 @@
           </ul>
         </li>
 
-        <li><a href="<?php echo base_url('Bukuc/data_buku')?>"><i class="fa fa-calendar"></i> <span>Buku Panduan</span></a></li>
+        <li><a href="<?php echo base_url('Bukuc/data_buku')?>"><i class="fa fa-book"></i> <span>Buku Panduan</span></a></li>
 
-        <li class="header">Config</li>
+        <li class="header">Exit</li>
         <li><a href="<?php echo base_url('loginc/logout')?>"><i class="fa fa-power-off text-red"></i> <span>Logout</span></a></li>
       </ul>
     </section>

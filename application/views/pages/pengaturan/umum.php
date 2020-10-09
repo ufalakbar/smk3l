@@ -49,27 +49,36 @@
 
                     <div class="form-group col-md-12">
                       <label>No Telepon</label>
-                      <input name="phone_number" type="number" class="form-control"  value="<?php echo $row->phone_number; ?>">
+                      <input name="phone_number" type="text" class="form-control"  value="<?php echo $row->phone_number; ?>">
                     </div>
                     <div class="form-group col-md-12">
                       <label>Fax</label>
-                      <input name="fax" type="number" class="form-control"  value="<?php echo $row->fax; ?>">
+                      <input name="fax" type="text" class="form-control"  value="<?php echo $row->fax; ?>">
                     </div>                    
                   </div>
+
                   <div class="col-md-6">
                     <div class="form-group col-md-12">
-                      <h4>Modul SEO (Search Engine Optimization)</h4>
+                      <h4>Quality Risk Management</h4>
                     </div>
                     <div class="form-group col-md-12">
-                      <label>Keywords (Google search keywords)</label>
-                      <textarea name="keywords" class="form-control"><?php echo $row->keywords; ?></textarea>
+                      <label>Manager QRM Saat Ini</label>
+                      <input name="manager" type="text" class="form-control" value="<?php echo $row->manager; ?>">
                     </div>
-
                     <div class="form-group col-md-12">
-                      <label>Metatext (Ex : Description)</label>
-                      <textarea name="metatext" class="form-control"><?php echo $row->metatext; ?></textarea>
-                    </div>                   
+                      <label>Alamat Perusahaan</label>
+                      <input name="alamat" type="text" class="form-control" value="<?php echo $row->alamat; ?>">
+                    </div>
+                    <div class="form-group col-md-12">
+                      <label>Facebook</label>
+                      <input name="fb" type="text" class="form-control" value="<?php echo $row->fb; ?>">
+                    </div>     
+                    <div class="form-group col-md-12">
+                      <label>Instagram</label>
+                      <input name="instagram" type="text" class="form-control" value="<?php echo $row->instagram; ?>">
+                    </div>             
                   </div>
+
                   <div class="col-md-12">
                     <div class="form-group col-md-12">
                       <label>About</label>
@@ -78,7 +87,7 @@
                   </div>
                   <div class="col-md-12">
                     <div class="form-group col-md-12">
-                      <label>Narasi QRM</label>
+                      <label>Profile QRM</label>
                       <textarea id="editor2" name="narasi_qrm" rows="10" cols="80"><?php echo $row->narasi_qrm; ?></textarea>
                     </div>
                   </div>

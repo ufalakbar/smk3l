@@ -17,8 +17,8 @@ class Bukuc extends CI_Controller {
 	public function data_buku()
 	{
         $data=array(
-            'headerTitle'=>'Data data buku',
-            'formTitle'=>'Tabel Data data buku',
+            'headerTitle'=>'Data Buku Panduan',
+            'formTitle'=>'Tabel Data Buku Panduan',
 
             'active_buku'=>'active',
             'data_buku'=>$this->Adminm->getAllData('tbl_buku'),

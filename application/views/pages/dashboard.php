@@ -32,6 +32,7 @@
         </div>
         <!--/.col (left) -->
       </div>
+      Selamat Datang di Halaman Admin Sistem Manajemen Keselamatan Kesehatan Kerja dan Lingkungan (SMK3L)
       <!-- /.row -->
     </section>
     <!-- /.content -->
