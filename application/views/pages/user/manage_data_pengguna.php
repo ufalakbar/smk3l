@@ -57,53 +57,63 @@
             </div>
             <!-- /.box-header -->
             <!-- form start -->
-            <form role="form" method="post" action="<?php echo base_url('userc/proses_data_pengguna')?>">
+            <form role="form" method="post" action="<?php echo base_url('karyawan/proses_data_karyawan')?>">
               <div class="box-body ">
                 <?php if (isset($id)) { ?>
                   <div class="form-group col-md-12">
-                    <label>ID</label>
-                    <input name="id_user" type="text" class="form-control" value="<?php echo $id; ?>" readonly>
+                    <label>ID-Karyawan</label>
+                    <input name="id_karyawan" type="text" class="form-control" value="<?php echo $id; ?>" readonly>
+                  </div>
+
+                  <div class="form-group col-md-12">
+                    <label>NIP</label>
+                    <input name="nip" type="text" class="form-control" placeholder="Nomor Induk Pegawai" required>
                   </div>
 
                   <div class="form-group col-md-12">
                     <label>Nama</label>
-                    <input name="nm_user" type="text" class="form-control" placeholder="Nama User" required>
+                    <input name="nm_karyawan" type="text" class="form-control" placeholder="Nama Karyawan" required>
                   </div>
 
                   <div class="form-group col-md-12">
-                    <label>Username</label>
-                    <input name="username" type="text" class="form-control" placeholder="Username" required>
+                    <label>Divisi</label>
+                    <input name="divisi" type="text" class="form-control" placeholder="Divisi" required>
                   </div>
 
                   <div class="form-group col-md-12">
-                    <label>Password</label>
-                    <input name="password" type="password" class="form-control" placeholder="Password" required>
+                    <label>Email Kantor</label>
+                    <input name="email_karyawan" type="text" class="form-control" placeholder="Email Kantor" required>
                   </div>
 
                 <?php } else { ?>
                   <?php
                     $no=1;
-                    if(isset($data_user)){
-                       foreach($data_user as $row){
+                    if(isset($data_karyawan)){
+                       foreach($data_karyawan as $row){
                   ?>
                   <div class="form-group col-md-12">
-                    <label>ID</label>
-                    <input name="id" type="text" class="form-control" value="<?php echo $row->id_user; ?>" readonly>
+                    <label>ID-Karyawan</label>
+                    <input name="id" type="text" class="form-control" value="<?php echo $row->id_karyawan; ?>" readonly>
+                  </div>
+
+                  <div class="form-group col-md-12">
+                    <label>NIP</label>
+                    <input name="nip" type="text" class="form-control" placeholder="Nomor Induk Pegawai" value="<?php echo $row->nip; ?>">
                   </div>
 
                   <div class="form-group col-md-12">
                     <label>Nama</label>
-                    <input name="nm_user" type="text" class="form-control" placeholder="Nama User" value="<?php echo $row->nm_user; ?>">
+                    <input name="nm_karyawan" type="text" class="form-control" placeholder="Nama Karyawan" value="<?php echo $row->nm_karyawan; ?>">
                   </div>
 
                   <div class="form-group col-md-12">
-                    <label>Username</label>
-                    <input name="username" type="text" class="form-control" placeholder="Username" value="<?php echo $row->username; ?>">
+                    <label>Divisi</label>
+                    <input name="divisi" type="text" class="form-control" placeholder="Divisi" value="<?php echo $row->divisi; ?>">
                   </div>
 
                   <div class="form-group col-md-12">
-                    <label>Password</label>
-                    <input name="password" type="password" class="form-control" placeholder="Kosongkan Password apabila tidak ingin di ubah">
+                    <label>Email Kantor</label>
+                    <input name="email_karyawan" type="text" class="form-control" placeholder="Email Kantor" value="<?php echo $row->email_karyawan; ?>">
                   </div>
 
                   <?php }
@@ -115,7 +125,7 @@
 
               <div class="box-footer">
                 <button type="submit" class="btn btn-primary">Simpan</button>
-                <a href="<?php echo base_url('userc/data_pengguna')?>" type="button" class="btn btn-warning">Kembali</a>
+                <a href="<?php echo base_url('karyawan')?>" type="button" class="btn btn-warning">Kembali</a>
               </div>
             </form>
           </div>

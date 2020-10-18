@@ -125,10 +125,10 @@
           <ul class="treeview-menu">
             <li>
               <a href="<?php echo base_url('userc/data_admin')?>"><i class="fa fa-circle-o"></i>
-                Admin
+                Akun
               </a>
-              <a href="<?php echo base_url('userc/data_pengguna')?>"><i class="fa fa-circle-o"></i>
-                Karyawan
+              <a href="<?php echo base_url('karyawan')?>"><i class="fa fa-circle-o"></i>
+                Kelola Karyawan
               </a>
             </li>
           </ul>

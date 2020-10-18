@@ -49,12 +49,12 @@ class Adminm extends CI_Model{
 
     public function id_karyawan()
     {
-        $karyawan = $this->db->query("select MAX(RIGHT(id_user,4)) as id_max from tbl_karyawan");
+        $karyawan = $this->db->query("select MAX(RIGHT(id_karyawan,4)) as id_max from tbl_karyawan");
         $id = "";
         //Jika data sudah ada
         if($karyawan->num_rows()>0)
         {
-            foreach($user->result() as $k)
+            foreach($karyawan->result() as $k)
             {
                 $tmp = ((int)$k->id_max)+1;
                 $id = sprintf("%04s", $tmp);
@@ -65,7 +65,7 @@ class Adminm extends CI_Model{
         {
             $id = "0001";
         }
-        return "KAR-".$id;
+        return "KY-".$id;
     }
 
     //Fungsi untuk menampilkan id berita Auto Increment saat proses insert (otomatis)
@@ -398,8 +398,40 @@ class Adminm extends CI_Model{
         }
     } 
 
+    //Fungsi untuk mengecek apakah akun user sudah pernah dibuat atau belum
+    function cek_karyawan($nip) {
+        $this->db->select('*');
+        $this->db->from('tbl_karyawan');
+        $this->db->where('nip', $nip);
+        $this->db->limit(1);
+
+        //get query and processing
+        $query = $this->db->get();
+        if($query->num_rows() == 1) {
+            return TRUE;
+        } else {
+            return FALSE;
+        }
+    } 
+
     //Fungsi untuk melakukan login
     function login($username, $password) {
+        $this->db->select('*');
+        $this->db->from('tbl_user');
+        $this->db->where('username', $username);
+        $this->db->where('password', md5($password));
+        $this->db->limit(1);
+
+        $query = $this->db->get();
+        if($query->num_rows() == 1) {
+            return $query->result();
+        } else {
+            return false;
+        }
+    }
+
+    //Fungsi untuk melakukan login download
+    function download($nip, $password) {
         $this->db->select('*');
         $this->db->from('tbl_user');
         $this->db->where('username', $username);

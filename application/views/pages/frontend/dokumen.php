@@ -136,8 +136,10 @@
 					      </div>
 					      <form target="_blank" method="post" action="<?php echo base_url('loginc/download_dokumen/'.$row->file_dokumen.'/'.$row->id_kategori_dokumen) ?>">
 						      <div class="modal-body">
+						      	<label>Username</label>
 						      	<input type="text" name="username" class="form-control" placeholder="Username">
-						      	<br>
+						      	
+						      	<label>Password</label>
 						      	<input type="password" name="password" class="form-control" placeholder="password">
 						      </div>
 						      <div class="modal-footer">

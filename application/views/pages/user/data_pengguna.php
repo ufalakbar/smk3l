@@ -29,12 +29,16 @@
                 <thead>
                   <tr>
                       <th>No</th>
-                      <th>ID</th>
+                      <th>ID-Karyawan</th>
+                      <th>NIP</th>
                       <th>Nama</th>
-                      <th>Username</th>
+                      <th>Divisi</th>
+                      <th>Email</th>
+                    
+
                       <th>
                           <div align="center">
-                          <a href="<?php echo base_url('userc/manage_data_pengguna');?>" class="btn btn-default btn-xs"> <i class="fa fa-plus"></i> Tambah
+                          <a href="<?php echo base_url('karyawan/manage_data_karyawan');?>" class="btn btn-default btn-xs"> <i class="fa fa-plus"></i> Tambah
                           </a>
                           </div>
                       </th>
@@ -43,19 +47,21 @@
                   <tbody>                            
                       <?php
                         $no=1;
-                        if(isset($data_user)){
-                           foreach($data_user as $row){
+                        if(isset($data_karyawan)){
+                           foreach($data_karyawan as $row){
                       ?>
                       <tr>
                        <td><?php echo $no++; ?></td>
-                       <td><?php echo $row->id_user; ?></td>
-                       <td><?php echo $row->nm_user; ?></td>
-                       <td><?php echo $row->username; ?></td>
+                       <td><?php echo $row->id_karyawan; ?></td>
+                       <td><?php echo $row->nip; ?></td>
+                       <td><?php echo $row->nm_karyawan; ?></td>
+                       <td><?php echo $row->divisi; ?></td>
+                       <td><?php echo $row->email_karyawan; ?></td>
                        <td>
                           <div align="center">
-                          <a href="<?php echo base_url('userc/manage_data_pengguna/'.$row->id_user);?>" class="btn btn-default btn-xs"> <i class="fa fa-edit"></i> Ubah
+                          <a href="<?php echo base_url('karyawan/manage_data_karyawan/'.$row->id_karyawan);?>" class="btn btn-default btn-xs"> <i class="fa fa-edit"></i> Ubah
                           </a>
-                          <a href="<?php echo base_url('userc/proses_hapus_pengguna/'.$row->id_user);?>" class="btn btn-default btn-xs"> <i class="fa fa-trash-o"></i> Hapus
+                          <a href="<?php echo base_url('karyawan/proses_hapus_karyawan/'.$row->id_karyawan);?>" class="btn btn-default btn-xs"> <i class="fa fa-trash-o"></i> Hapus
                           </a>
                           </div>
                        </td>
