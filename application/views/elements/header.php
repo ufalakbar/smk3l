@@ -128,7 +128,7 @@
                 Admin
               </a>
               <a href="<?php echo base_url('userc/data_pengguna')?>"><i class="fa fa-circle-o"></i>
-                Pengguna
+                Karyawan
               </a>
             </li>
           </ul>

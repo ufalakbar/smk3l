@@ -47,6 +47,27 @@ class Adminm extends CI_Model{
         return "US-".$id;
     }
 
+    public function id_karyawan()
+    {
+        $karyawan = $this->db->query("select MAX(RIGHT(id_user,4)) as id_max from tbl_karyawan");
+        $id = "";
+        //Jika data sudah ada
+        if($karyawan->num_rows()>0)
+        {
+            foreach($user->result() as $k)
+            {
+                $tmp = ((int)$k->id_max)+1;
+                $id = sprintf("%04s", $tmp);
+            }
+        }
+        //jika data masih kosong
+        else
+        {
+            $id = "0001";
+        }
+        return "KAR-".$id;
+    }
+
     //Fungsi untuk menampilkan id berita Auto Increment saat proses insert (otomatis)
     public function id_berita()
     {
