@@ -36,6 +36,7 @@
                   <div class="col-md-12">
                     <div class="form-group col-md-12">
                       <h4>Logo Settings</h4>
+                      <?= $this->session->flashdata('notif'); ?>
                     </div>
                     <div class="form-group col-md-12">
                       <label>Masukkan Logo (Dimensi Gambar Maks: 175 X 62, Format: PNG, Ukuran: Max 1MB)</label>

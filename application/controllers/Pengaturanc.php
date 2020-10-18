@@ -67,13 +67,16 @@ class Pengaturanc extends CI_Controller {
         $id['config_id'] = 1;
 
         $config['upload_path'] = './uploads/img';
-        $config['allowed_types'] = 'jpg|png|gif|pdf|docs|docx|doc';
-        $config['max_size'] = '100000';
+        $config['allowed_types'] = 'png';
+        $config['max_size'] = '1024';
+        $config['max_width'] = '175';
+        $config['max_height'] = '62';
+
 
         $this->load->library('upload', $config);
         
         if ( ! $this->upload->do_upload('logo')) {
-            $this->session->set_flashdata('notif','File gagal di upload !');
+            $this->session->set_flashdata('notif','<div class="alert alert-danger" role="alert">File gambar tidak sesuai !</div>');
             redirect('pengaturanc/logo');
         } else {
             $logo = $this->upload->data();
@@ -109,13 +112,13 @@ class Pengaturanc extends CI_Controller {
         $id['config_id'] = 1;
         
         $config['upload_path'] = './uploads/img';
-        $config['allowed_types'] = 'jpg|png|gif|pdf|docs|docx|doc';
-        $config['max_size'] = '100000';
+        $config['allowed_types'] = 'jpg|png';
+        $config['max_size'] = '1024';
 
         $this->load->library('upload', $config);
         
         if ( ! $this->upload->do_upload('icon')) {
-            $this->session->set_flashdata('notif','File gagal di upload !');
+            $this->session->set_flashdata('notif','<div class="alert alert-danger" role="alert">File gambar tidak sesuai !</div>');
             redirect('pengaturanc/icon');
         } else {
             $icon = $this->upload->data();

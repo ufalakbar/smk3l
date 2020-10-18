@@ -36,6 +36,7 @@
                   <div class="col-md-12">
                     <div class="form-group col-md-12">
                       <h4>Icon Settings</h4>
+                       <?= $this->session->flashdata('notif'); ?>
                     </div>
                     <div class="form-group col-md-12">
                       <label>Masukkan Icon (Dimensi Gambar: Bebas, Format: JPG atau PNG, Ukuran: Max 1MB)</label>
