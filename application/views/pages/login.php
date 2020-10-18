@@ -18,6 +18,7 @@
     <form action="<?php echo site_url('loginc/proses_login') ?>" method="post" name="Login_Form" class="form-signin">       
         <h3 class="form-signin-heading">Login SMK3L PT.INTI</h3>
         <hr class="colorgraph"><br>
+        <?= $this->session->flashdata('message'); ?>
 
         <?php 
         $info = $this->session->flashdata('info');

@@ -47,8 +47,8 @@ class Loginc extends CI_Controller {
             return TRUE;
         } else {
             //jika validasi salah
-            $this->session->set_flashdata('notif','Username atau Password salah');
-            redirect('loginc','refresh');
+            $this->session->set_flashdata('message','<div class="alert alert-danger" role="alert">Username atau password salah!</div>');
+            redirect('loginc');
             return FALSE;
         }
     }
