@@ -9,6 +9,7 @@ application/logs/*
 !application/*/.htaccess
 
 uploads/berkas/*
+uploads/img/*
 
 composer.lock
 
