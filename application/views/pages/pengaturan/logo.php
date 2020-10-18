@@ -38,7 +38,7 @@
                       <h4>Logo Settings</h4>
                     </div>
                     <div class="form-group col-md-12">
-                      <label>Logo</label>
+                      <label>Masukkan Logo (Dimensi Gambar Maks: 175 X 62, Format: PNG, Ukuran: Max 1MB)</label>
                       <input name="logo" type="file" class="form-control" value="<?php echo $row->nameweb; ?>">
                     </div>
                     <div class="form-group col-md-12">

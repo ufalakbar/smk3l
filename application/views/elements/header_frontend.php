@@ -19,7 +19,7 @@
     <header role="banner">
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
-          <a class="navbar-brand " href="http://smk3.inti.net/">SMK3L</a>
+          <a class="navbar-brand" href="<?php echo base_url() ?>"><img src="<?php echo base_url('uploads/img/'.config_web('logo'))?>" alt=""  /></a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>

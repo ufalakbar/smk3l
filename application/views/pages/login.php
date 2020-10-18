@@ -30,7 +30,10 @@
         <input type="text" class="form-control" name="username" placeholder="Username" required="" autofocus="" />
         <input type="password" class="form-control" name="password" placeholder="Password" required=""/>          
        
-        <button class="btn btn-lg btn-primary btn-block"  name="Submit" value="Login" type="Submit">Login</button>        
+        <button class="btn btn-lg btn-primary btn-block"  name="Submit" value="Login" type="Submit">Login</button><br>
+        <div class="text-center">
+         <a class="small" href="">Lupa Password?</a>
+        </div>       
     </form>     
   </div>
 </div>

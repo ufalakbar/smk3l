@@ -38,7 +38,7 @@
                       <h4>Icon Settings</h4>
                     </div>
                     <div class="form-group col-md-12">
-                      <label>Icon</label>
+                      <label>Masukkan Icon (Dimensi Gambar: Bebas, Format: JPG atau PNG, Ukuran: Max 1MB)</label>
                       <input name="icon" type="file" class="form-control" required>
                     </div>
                     <div class="form-group col-md-12">
