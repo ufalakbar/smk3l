@@ -32,6 +32,7 @@
                       <th>ID</th>
                       <th>Nama</th>
                       <th>Username</th>
+                      <th>Level User</th>
                       <th>
                           <div align="center">
                           <a href="<?php echo base_url('userc/manage_data_admin');?>" class="btn btn-default btn-xs"> <i class="fa fa-plus"></i> Tambah
@@ -51,6 +52,7 @@
                        <td><?php echo $row->id_user; ?></td>
                        <td><?php echo $row->nm_user; ?></td>
                        <td><?php echo $row->username; ?></td>
+                       <td><?php echo $row->level_user; ?></td>
                        <td>
                           <div align="center">
                           <a href="<?php echo base_url('userc/manage_data_admin/'.$row->id_user);?>" class="btn btn-default btn-xs"> <i class="fa fa-edit"></i> Ubah

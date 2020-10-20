@@ -80,6 +80,14 @@
                     <input name="password" type="password" class="form-control" placeholder="Password" required>
                   </div>
 
+                  <div class="form-group col-md-12">
+                    <label>Level User</label>
+                    <select name="level_user" class="form-control" required>
+                      <option value="Admin">Admin</option>
+                      <option value="Pengguna">Pengguna</option>
+                    </select>
+                  </div>
+
                 <?php } else { ?>
                   <?php
                     $no=1;
@@ -103,7 +111,15 @@
 
                   <div class="form-group col-md-12">
                     <label>Password</label>
-                    <input name="password" type="password" class="form-control" placeholder="Kosongkan Password apabila tidak ingin di ubah">
+                    <input name="password" type="password" class="form-control" placeholder="Password" required>
+                  </div>
+
+                  <div class="form-group col-md-12">
+                    <label>Level User</label>
+                    <select name="level_user" class="form-control" required>
+                      <option value="Admin">Admin</option>
+                      <option value="Pengguna">Pengguna</option>
+                    </select>
                   </div>
 
                   <?php }

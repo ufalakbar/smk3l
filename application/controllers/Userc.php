@@ -16,15 +16,12 @@ class Userc extends CI_Controller {
 
 	public function data_admin()
 	{
-        $id=array(
-            'level_user'=>'Admin',
-        );
         $data=array(
-            'headerTitle'=>'Data Admin',
-            'formTitle'=>'Tabel Data Admin',
+            'headerTitle'=>'Data Akun',
+            'formTitle'=>'Tabel Data Akun',
 
             'active_user'=>'active',            
-            'data_user'=>$this->Adminm->getSelectedData('tbl_user', $id),
+            'data_user'=>$this->Adminm->getAllData('tbl_user'),
         );		
 		$this->load->view('elements/header', $data);
 		$this->load->view('pages/user/data_admin');
@@ -82,7 +79,7 @@ class Userc extends CI_Controller {
 	            'nm_user'=>$this->input->post('nm_user'),
 	            'username'=>$this->input->post('username'),
 	            'password'=>md5($this->input->post('password')),
-	            'level_user'=>'Admin',
+	            'level_user'=>$this->input->post('level_user'),
 	        );
 	        $this->Adminm->insertData('tbl_user',$data);
 
@@ -102,6 +99,7 @@ class Userc extends CI_Controller {
 	            'nm_user'=>$this->input->post('nm_user'),
 	            'username'=>$this->input->post('username'),
 	            'password'=>md5($this->input->post('password')),
+	            'level_user'=>$this->input->post('level_user'),
 	        );
 	        $this->Adminm->updateData('tbl_user',$data,$id);
     	}

@@ -5,7 +5,7 @@ class Loginc extends CI_Controller {
 
 	public function index()
 	{
-        if($this->session->userdata('LEVEL') != '' ){
+        if($this->session->userdata('LEVEL') == 'Admin' ){
             redirect('dashboardc');
         };
 
@@ -33,14 +33,18 @@ class Loginc extends CI_Controller {
                     'USERNAME' => $row->username,
                     'PASS'=>$row->password,
                     'NAME'=>$row->nm_user,
-                    'LEVEL' => 'Admin',
+                    'LEVEL' =>$row->level_user,
                     'login_status'=>true,
                 );
                 //set session with value from database
                 $this->session->set_userdata($sess_array);
 
-                if ($this->session->userdata('LEVEL') != ''){ 
+                if ($this->session->userdata('LEVEL') == 'Admin'){ 
                 redirect('dashboardc','refresh');
+                }else{
+                    $this->session->set_flashdata('message','<div class="alert alert-danger" role="alert">Anda bukan seorang Admin!</div>');
+                    redirect('loginc');
+                    return FALSE;
                 } 
 
             }
