@@ -64,13 +64,8 @@ class Karyawan extends CI_Controller {
         $key     = $this->input->post('id_karyawan');
         if ($key != '') {
 
-            $nip    = $this->input->post('nip');
-            $cek_karyawan = $this->Adminm->cek_karyawan($nip);
             
-            if ( $cek_karyawan == TRUE) {
-                $this->session->set_flashdata('error', "Data karyawan sudah tersedia");
-                redirect('karyawan/manage_data_karyawan');
-            } 
+            
 
              $data=array(
                 'id_karyawan'=>$this->input->post('id_karyawan'),
@@ -79,6 +74,12 @@ class Karyawan extends CI_Controller {
                 'divisi'=>$this->input->post('divisi'),
                 'email_karyawan'=>$this->input->post('email_karyawan'),
             );
+             $nip_valid = $this->Adminm->validasi_nip($data['nip']);
+            
+            if ( $nip_valid == False) {
+                $this->session->set_flashdata('error', "NIP sudah digunakan");
+                redirect('karyawan/manage_data_karyawan');
+            } 
             $this->Adminm->insertData('tbl_karyawan',$data);
 
         } elseif ($key == '') {
