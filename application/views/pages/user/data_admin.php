@@ -30,6 +30,7 @@
                   <tr>
                       <th>No</th>
                       <th>ID</th>
+                      <th>NIP</th>
                       <th>Nama</th>
                       <th>Username</th>
                       <th>Level User</th>
@@ -50,6 +51,7 @@
                       <tr>
                        <td><?php echo $no++; ?></td>
                        <td><?php echo $row->id_user; ?></td>
+                       <td><?php echo $row->nip; ?></td>
                        <td><?php echo $row->nm_user; ?></td>
                        <td><?php echo $row->username; ?></td>
                        <td><?php echo $row->level_user; ?></td>
