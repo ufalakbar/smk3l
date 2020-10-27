@@ -66,21 +66,30 @@ class Userc extends CI_Controller {
         $pass    = $this->input->post('password');
     	if ($key != '') {
 
-	        $username    = $this->input->post('username');
-	        $cek_user = $this->Adminm->cek_user($username);
-
-	        if ($cek_user == TRUE OR $cek_pegawai == TRUE) {
-	            $this->session->set_flashdata('error','Data sudah digunakan');
-		        redirect("userc/manage_data_user");
-	        }
 
 	        $data=array(
 		        'id_user'=>$this->input->post('id_user'),
+		        'nip'=>$this->input->post('nip'),
 	            'nm_user'=>$this->input->post('nm_user'),
 	            'username'=>$this->input->post('username'),
 	            'password'=>md5($this->input->post('password')),
 	            'level_user'=>$this->input->post('level_user'),
 	        );
+
+	        $cek_user = $this->Adminm->cek_user($data['username']);
+	        $cek_nip_used = $this->Adminm->cek_nip_used($data['nip']);
+	        $cek_nip_valid = $this->Adminm->validasi_nip($data['nip']);
+
+	        if ($cek_user == TRUE) {
+	            $this->session->set_flashdata('error','Username sudah digunakan');
+		        redirect("userc/manage_data_admin");
+	        }
+	        if ($cek_nip == TRUE OR $cek_nip_used) {
+	            $this->session->set_flashdata('error','NIP sudah digunakan atau Tidak Valid');
+		        redirect("userc/manage_data_admin");
+	        }
+
+
 	        $this->Adminm->insertData('tbl_user',$data);
 
 
