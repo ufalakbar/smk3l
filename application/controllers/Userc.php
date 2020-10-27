@@ -84,7 +84,7 @@ class Userc extends CI_Controller {
 	            $this->session->set_flashdata('error','Username sudah digunakan');
 		        redirect("userc/manage_data_admin");
 	        }
-	        if ($cek_nip == TRUE OR $cek_nip_used) {
+	        if ($cek_nip_valid == TRUE OR $cek_nip_used == TRUE) {
 	            $this->session->set_flashdata('error','NIP sudah digunakan atau Tidak Valid');
 		        redirect("userc/manage_data_admin");
 	        }
