@@ -391,23 +391,37 @@ class Adminm extends CI_Model{
 
         //get query and processing
         $query = $this->db->get();
-        if($query->num_rows() == 1) {
+        if($query->num_rows() > 0) {
             return TRUE;
         } else {
             return FALSE;
         }
     } 
 
+    //Fungsi untuk cek apakah nip pada user masih kosong
+    function cek_nip_used($nip){
+        $this->db->select('*');
+        $this->db->from('tbl_user');
+        $this->db->where('nip', $nip);
+
+        $query = $this->db->get();
+        if($query->num_rows() > 0) {
+            return TRUE;
+        } else {
+            return FALSE;
+        }
+    }
+
     //Fungsi untuk mengecek apakah akun user sudah pernah dibuat atau belum
-    function cek_karyawan($nip) {
+    function validasi_nip($nip) {
         $this->db->select('*');
         $this->db->from('tbl_karyawan');
         $this->db->where('nip', $nip);
-        $this->db->limit(1);
+        
 
         //get query and processing
         $query = $this->db->get();
-        if($query->num_rows() == 1) {
+        if($query->num_rows() == 0 ) {
             return TRUE;
         } else {
             return FALSE;
