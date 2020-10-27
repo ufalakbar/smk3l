@@ -64,7 +64,10 @@
                     <label>ID</label>
                     <input name="id_user" type="text" class="form-control" value="<?php echo $id; ?>" readonly>
                   </div>
-
+                  <div class="form-group col-md-12">
+                    <label>NIP</label>
+                    <input name="nip" type="text" class="form-control" placeholder="NIP yang Valid" required>
+                  </div>
                   <div class="form-group col-md-12">
                     <label>Nama</label>
                     <input name="nm_user" type="text" class="form-control" placeholder="Nama User" required>
