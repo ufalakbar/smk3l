@@ -66,7 +66,7 @@
                   </div>
                   <div class="form-group col-md-12">
                     <label>NIP</label>
-                    <input name="nip" type="text" class="form-control" placeholder="NIP yang Valid" required>
+                    <input name="nip" type="number" class="form-control" placeholder="NIP yang Valid" minlength="9" required>
                   </div>
                   <div class="form-group col-md-12">
                     <label>Nama</label>

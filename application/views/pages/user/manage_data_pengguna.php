@@ -67,7 +67,7 @@
 
                   <div class="form-group col-md-12">
                     <label>NIP</label>
-                    <input name="nip" type="text" class="form-control" placeholder="Nomor Induk Pegawai" required>
+                    <input name="nip" type="number" class="form-control" placeholder="Nomor Induk Pegawai" required>
                   </div>
 
                   <div class="form-group col-md-12">

@@ -79,6 +79,7 @@ class Userc extends CI_Controller {
 	        $cek_user = $this->Adminm->cek_user($data['username']);
 	        $cek_nip_used = $this->Adminm->cek_nip_used($data['nip']);
 	        $cek_nip_valid = $this->Adminm->validasi_nip($data['nip']);
+	        $cek_valid_name = preg_match("/^[a-zA-Z-' ]*$/", $data['nm_user']);
 
 	        if ($cek_user == TRUE) {
 	            $this->session->set_flashdata('error','Username sudah digunakan');
@@ -86,6 +87,10 @@ class Userc extends CI_Controller {
 	        }
 	        if ($cek_nip_valid == TRUE OR $cek_nip_used == TRUE) {
 	            $this->session->set_flashdata('error','NIP sudah digunakan atau Tidak Valid');
+		        redirect("userc/manage_data_admin");
+	        }
+	        if(!$cek_valid_name){
+	        	$this->session->set_flashdata('error','Gunakan Nama yang Valid!!');
 		        redirect("userc/manage_data_admin");
 	        }
 
