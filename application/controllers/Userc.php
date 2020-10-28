@@ -34,8 +34,8 @@ class Userc extends CI_Controller {
 		if ($id == '') {
 
 	        $data=array(
-	            'headerTitle'=>'Data Admin',
-	            'formTitle'=>'Form Tambah Admin',
+	            'headerTitle'=>'Data Akun',
+	            'formTitle'=>'Form Tambah Akun',
 
 	            'active_user'=>'active',            
 	            'id'=>$this->Adminm->id_user(),
@@ -48,8 +48,8 @@ class Userc extends CI_Controller {
 		} else {
 	        $id_user['id_user']= $this->uri->segment(3);
 	        $data=array(
-	            'headerTitle'=>'Data Admin',
-	            'formTitle'=>'Form Ubah Admin',
+	            'headerTitle'=>'Data Akun',
+	            'formTitle'=>'Form Ubah Akun',
 
 	            'active_user'=>'active',            
 	            'data_user'=>$this->Adminm->getSelectedData('tbl_user',$id_user),
