@@ -59,9 +59,9 @@
                        <td><?php echo $row->email_karyawan; ?></td>
                        <td>
                           <div align="center">
-                          <a href="<?php echo base_url('karyawan/manage_data_karyawan/'.$row->id_karyawan);?>" class="btn btn-default btn-xs"> <i class="fa fa-edit"></i> Ubah
+                          <a href="<?php echo base_url('karyawan/manage_data_karyawan/'.$row->nip);?>" class="btn btn-default btn-xs"> <i class="fa fa-edit"></i> Ubah
                           </a>
-                          <a href="<?php echo base_url('karyawan/proses_hapus_karyawan/'.$row->id_karyawan);?>" class="btn btn-default btn-xs"> <i class="fa fa-trash-o"></i> Hapus
+                          <a href="<?php echo base_url('karyawan/proses_hapus_karyawan/'.$row->nip);?>" class="btn btn-default btn-xs"> <i class="fa fa-trash-o"></i> Hapus
                           </a>
                           </div>
                        </td>
