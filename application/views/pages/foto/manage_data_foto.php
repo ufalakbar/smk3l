@@ -81,7 +81,7 @@
                   </div>
 
                   <div class="form-group col-md-12">
-                    <label>Tanggal</label>
+                    <label>Tanggal Kejadian</label>
                     <input name="tgl_foto" type="date" class="form-control" required>
                   </div>
 
@@ -100,10 +100,7 @@
                     <label>Nama foto</label>
                     <input name="nm_foto" type="text" class="form-control" value="<?php echo $row->nm_foto; ?>">
                   </div>
-                  <div class="form-group col-md-12">
-                    <label>File</label>
-                    <a href="<?php echo base_url('uploads/berkas/'.$row->file_foto) ?>">Download</a>
-                  </div>
+                  
                   <div class="form-group col-md-12">
                     <label>Status</label>
                     <select name="status_foto" class="form-control" required>

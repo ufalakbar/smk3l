@@ -18,6 +18,36 @@
       <div class="row">
         <!-- left column -->
         <div class="col-md-12">
+          <?php
+          $data2=$this->session->flashdata('message');
+          if($data2!=""){ ?>
+              <div id="pesan-error-flash">
+                  <div class='alert alert-success alert-dismissable'>
+                      <button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;</button>
+                      <strong>  Sukses ! </strong> <?=$data2;?>
+                  </div>
+              </div>
+          <?php } ?>
+          <?php
+          $data2=$this->session->flashdata('edit');
+          if($data2!=""){ ?>
+              <div id="pesan-error-flash">
+                  <div class='alert alert-success alert-dismissable'>
+                      <button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;</button>
+                      <strong>  Sukses ! </strong> <?=$data2;?>
+                  </div>
+              </div>
+          <?php } ?>
+          <?php
+          $data2=$this->session->flashdata('hapus');
+          if($data2!=""){ ?>
+              <div id="pesan-error-flash">
+                  <div class='alert alert-success alert-dismissable'>
+                      <button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;</button>
+                      <strong>  Sukses ! </strong> <?=$data2;?>
+                  </div>
+              </div>
+          <?php } ?>
           <!-- general form elements -->
           <div class="box box-primary">
             <div class="box-header with-border">
@@ -32,7 +62,7 @@
                       <th>Judul Buku</th>
                       <th>Tanggal Disahkan</th>
                       <th>Penerbit</th>
-                      <th>Link Download</th>
+                      <th>View</th>
                       <th>Status</th>
                       
                       <th>
@@ -58,7 +88,7 @@
                         </td>
                        <td><?php echo $row->tahun; ?></td>
                        <td><?php echo $row->penerbit; ?></td>
-                       <td><a href="<?php echo base_url('uploads/berkas/'.$row->file_buku) ?>">Download</a></td>
+                       <td><a href="<?php echo base_url('uploads/berkas/'.$row->file_buku) ?>">View</a></td>
 
                        <td><?php echo $row->status_buku; ?></td>
                        <td>

@@ -83,6 +83,8 @@ class Fotoc extends CI_Controller {
                     'tgl_foto' => $this->input->post('tgl_foto'),
                 );
                 $this->Adminm->insertData('tbl_foto',$data);
+                $this->session->set_flashdata('message','Data berhasil ditambah!');
+
             }
 
         } elseif ($key == '') {
@@ -101,6 +103,7 @@ class Fotoc extends CI_Controller {
                     'tgl_foto' => $this->input->post('tgl_foto'),
                 );
                 $this->Adminm->updateData('tbl_foto',$data,$id);
+                $this->session->set_flashdata('edit','Data berhasil diubah!');
             } else {
                 $file_foto = $this->upload->data();
                 $id['id_foto'] = $this->input->post('id');
@@ -121,6 +124,7 @@ class Fotoc extends CI_Controller {
     function proses_hapus_foto(){
         $id['id_foto'] = $this->uri->segment(3);
         $this->Adminm->deleteData('tbl_foto',$id);
+        $this->session->set_flashdata('hapus','Data berhasil dihapus!');
 
         redirect("fotoc");
     }

@@ -67,7 +67,7 @@ class Pengaturanc extends CI_Controller {
         $id['config_id'] = 1;
 
         $config['upload_path'] = './uploads/img';
-        $config['allowed_types'] = 'png';
+        $config['allowed_types'] = 'png|jpg|jpeg';
         $config['max_size'] = '1024';
         $config['max_width'] = '175';
         $config['max_height'] = '62';
@@ -85,8 +85,9 @@ class Pengaturanc extends CI_Controller {
                 'logo' => $logo['file_name']
             );
             $this->Adminm->updateData('tbl_config',$data,$id);
+            $this->session->set_flashdata('message','Data berhasil di ubah');
         }
-        $this->session->set_flashdata('notif','Data berhasil di ubah');
+       
 
         redirect("pengaturanc/logo");
     }
@@ -127,8 +128,9 @@ class Pengaturanc extends CI_Controller {
                 'icon' => $icon['file_name']
             );
             $this->Adminm->updateData('tbl_config',$data,$id);
+            $this->session->set_flashdata('message','Data berhasil di ubah');
         }
-        $this->session->set_flashdata('notif','Data berhasil di ubah');
+        
 
         redirect("pengaturanc/icon");
     }

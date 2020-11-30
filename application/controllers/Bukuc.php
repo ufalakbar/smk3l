@@ -66,17 +66,26 @@ class Bukuc extends CI_Controller {
     function proses_data_buku() {
         $key     = $this->input->post('id_buku');
     	if ($key != '') {
-    		$has_child = "No";
+    		$config['upload_path'] = './uploads/berkas';
+	        $config['allowed_types'] = 'pdf|docs|docx|doc|xlsx|xls';
+	        $config['max_size'] = '1000000';
+
+	        $this->load->library('upload', $config);
+	        $this->upload->do_upload('file_buku');
+
+	        $file_buku = $this->upload->data();
 
 	        $data=array(
 		        'id_buku'=>$this->input->post('id_buku'),
 	            'judul_buku'=>$this->input->post('judul_buku'),
+	            'file_buku'=> $file_buku['file_name'],
 	            'tahun'=>$this->input->post('tahun'),
 	            'penerbit'=>$this->input->post('penerbit'),
 	            'status_buku'=>$this->input->post('status_buku'),
 		        
 	        );
 	        $this->Adminm->insertData('tbl_buku',$data);
+	        $this->session->set_flashdata('message','Data berhasil ditambah!');
 
 
     	} elseif ($key == '') {
@@ -89,6 +98,7 @@ class Bukuc extends CI_Controller {
 	            'status_buku'=>$this->input->post('status_buku'),
 	        );
 	        $this->Adminm->updateData('tbl_buku',$data,$id);
+	        $this->session->set_flashdata('edit','Data berhasil diubah!');
 
     	} 
         redirect("bukuc/data_buku");
@@ -97,6 +107,7 @@ class Bukuc extends CI_Controller {
     function proses_hapus_buku(){
         $id['id_buku'] = $this->uri->segment(3);
         $this->Adminm->deleteData('tbl_buku',$id);
+        $this->session->set_flashdata('hapus','Data berhasil dihapus!');
 
         redirect("bukuc/data_buku");
     }

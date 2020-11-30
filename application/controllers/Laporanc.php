@@ -73,7 +73,7 @@ class Laporanc extends CI_Controller {
 	        $this->load->library('upload', $config);
 	        
 	        if ( ! $this->upload->do_upload('file_laporan')) {
-	            $this->session->set_flashdata('notif','File gagal di upload !');
+	            $this->session->set_flashdata('notif','File Laporan gagal di upload !');
 	            redirect('laporanc/manage_data_laporan');
 	        } else {
 	            $file_laporan = $this->upload->data();
@@ -88,6 +88,7 @@ class Laporanc extends CI_Controller {
 		            'tgl_kadaluarsa'=>$this->input->post('tgl_kadaluarsa'),
 	            );
 		        $this->Adminm->insertData('tbl_laporan',$data);
+		        $this->session->set_flashdata('message','Data berhasil ditambah!');
 	        }
 
     	} elseif ($key == '') {
@@ -108,6 +109,7 @@ class Laporanc extends CI_Controller {
 		            'tgl_kadaluarsa'=>$this->input->post('tgl_kadaluarsa'),
 		        );
 		        $this->Adminm->updateData('tbl_laporan',$data,$id);
+		        $this->session->set_flashdata('edit','Data berhasil diubah!');
 	        } else {
 	            $file_laporan = $this->upload->data();
 		        $id['id_laporan'] = $this->input->post('id');
@@ -130,6 +132,7 @@ class Laporanc extends CI_Controller {
     function proses_hapus_laporan(){
         $id['id_laporan'] = $this->uri->segment(3);
         $this->Adminm->deleteData('tbl_laporan',$id);
+        $this->session->set_flashdata('hapus','Data berhasil dihapus!');
 
         redirect("laporanc/data_laporan");
     }

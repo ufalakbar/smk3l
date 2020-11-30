@@ -18,6 +18,36 @@
       <div class="row">
         <!-- left column -->
         <div class="col-md-12">
+          <?php
+          $data2=$this->session->flashdata('message');
+          if($data2!=""){ ?>
+              <div id="pesan-error-flash">
+                  <div class='alert alert-success alert-dismissable'>
+                      <button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;</button>
+                      <strong>  Sukses ! </strong> <?=$data2;?>
+                  </div>
+              </div>
+          <?php } ?>
+          <?php
+          $data3=$this->session->flashdata('edit');
+          if($data3!=""){ ?>
+              <div id="pesan-error-flash">
+                  <div class='alert alert-success alert-dismissable'>
+                      <button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;</button>
+                      <strong>  Sukses ! </strong> <?=$data3;?>
+                  </div>
+              </div>
+          <?php } ?>
+          <?php
+          $data4=$this->session->flashdata('hapus');
+          if($data4!=""){ ?>
+              <div id="pesan-error-flash">
+                  <div class='alert alert-success alert-dismissable'>
+                      <button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;</button>
+                      <strong>  Sukses ! </strong> <?=$data4;?>
+                  </div>
+              </div>
+          <?php } ?>
           <!-- general form elements -->
           <div class="box box-primary">
             <div class="box-header with-border">
@@ -31,7 +61,7 @@
                       <th>No</th>
                       <th>foto</th>
                       <th>Status</th>
-                      <th>Tanggal</th>
+                      <th>Tanggal Kejadian</th>
                       <th>Link Download</th>
                       <th>
                           <div align="center">
@@ -56,7 +86,7 @@
                         </td>
                        <td><?php echo $row->status_foto; ?></td>
                        <td><?php echo $row->tgl_foto; ?></td>
-                       <td><a href="<?php echo base_url('uploads/berkas/'.$row->file_foto) ?>">Download</a></td>
+                       <td><a href="<?php echo base_url('uploads/berkas/'.$row->file_foto) ?>">View</a></td>
                        <td>
                           <div align="center">
                           <a href="<?php echo base_url('fotoc/manage_data_foto/'.$row->id_foto);?>" class="btn btn-default btn-xs"> <i class="fa fa-edit"></i> Ubah

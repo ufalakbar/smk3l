@@ -70,7 +70,7 @@ class Dokumenc extends CI_Controller {
 	        $this->load->library('upload', $config);
 	        
 	        if ( ! $this->upload->do_upload('file_dokumen')) {
-	            $this->session->set_flashdata('notif','File gagal di upload !');
+	            $this->session->set_flashdata('notif','File Dokumen gagal di upload !');
 	            redirect('dokumenc/manage_data_dokumen');
 	        } else {
 	            $file_dokumen = $this->upload->data();
@@ -85,6 +85,7 @@ class Dokumenc extends CI_Controller {
 		            'tgl_kadaluarsa' =>$this->input->post('tgl_kadaluarsa'),
 	            );
 		        $this->Adminm->insertData('tbl_dokumen',$data);
+		        $this->session->set_flashdata('message','Data berhasil ditambah!');
 	        }
 
     	} elseif ($key == '') {
@@ -105,6 +106,7 @@ class Dokumenc extends CI_Controller {
 		            'tgl_kadaluarsa' =>$this->input->post('tgl_kadaluarsa'),
 		        );
 		        $this->Adminm->updateData('tbl_dokumen',$data,$id);
+		        $this->session->set_flashdata('edit','Data berhasil diubah!');
 	        } else {
 	            $file_dokumen = $this->upload->data();
 		        $id['id_dokumen'] = $this->input->post('id');
@@ -127,6 +129,7 @@ class Dokumenc extends CI_Controller {
     function proses_hapus_dokumen(){
         $id['id_dokumen'] = $this->uri->segment(3);
         $this->Adminm->deleteData('tbl_dokumen',$id);
+         $this->session->set_flashdata('hapus','Data berhasil dihapus!');
 
         redirect("dokumenc/data_dokumen");
     }

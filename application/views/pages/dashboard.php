@@ -32,7 +32,7 @@
         </div>
         <!--/.col (left) -->
       </div>
-      Selamat Datang di Halaman Admin Sistem Manajemen Keselamatan Kesehatan Kerja dan Lingkungan (SMK3L)
+      Selamat Datang di Halaman Admin Sistem Repository Dokumen K3L Di PT. INTI Bandung
       <!-- /.row -->
     </section>
     <!-- /.content -->

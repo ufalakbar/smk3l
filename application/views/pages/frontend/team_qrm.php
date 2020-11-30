@@ -1,7 +1,7 @@
 	<div class="top-shadow"></div>
 
     <div class="inner-page">
-    <div class="slider-item" style="background-image: url('templates/images/hero_2.jpg');">
+    <div class="slider-item" style="background-image: url('templates/images/hero_2.jpg'); ">
         
         <div class="container">
           <div class="row slider-text align-items-center justify-content-center">

@@ -96,6 +96,8 @@ class Userc extends CI_Controller {
 
 
 	        $this->Adminm->insertData('tbl_user',$data);
+	        $this->session->set_flashdata('message','Data berhasil ditambah!');
+
 
 
     	} elseif ($key == '' AND $pass == '') {
@@ -106,6 +108,7 @@ class Userc extends CI_Controller {
 	            'username'=>$this->input->post('username'),
 	        );
 	        $this->Adminm->updateData('tbl_user',$data,$id);
+	        $this->session->set_flashdata('edit','Data berhasil diubah!');
 
     	} elseif ($key == '' AND $pass != '') {
 	        $id['id_user'] = $this->input->post('id');
@@ -116,6 +119,7 @@ class Userc extends CI_Controller {
 	            'level_user'=>$this->input->post('level_user'),
 	        );
 	        $this->Adminm->updateData('tbl_user',$data,$id);
+	        $this->session->set_flashdata('edit','Data berhasil diubah!');
     	}
         redirect("userc/data_admin");
     }
@@ -123,6 +127,7 @@ class Userc extends CI_Controller {
     function proses_hapus_admin(){
         $id['id_user'] = $this->uri->segment(3);
         $this->Adminm->deleteData('tbl_user',$id);
+        $this->session->set_flashdata('hapus','Data berhasil dihapus!');
 
         redirect("userc/data_admin");
     }

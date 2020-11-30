@@ -69,6 +69,7 @@
 
                   <div class="form-group col-md-12">
                     <label>Cover</label>
+                    <small>Spesifikasi (format: jpg/png, size: 500x375)</small>
                     <input name="cover_berita" type="file" class="form-control" placeholder="Nama Kategori Berita" required>
                   </div>
 

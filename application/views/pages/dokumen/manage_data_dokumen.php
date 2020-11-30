@@ -74,6 +74,7 @@
 
                   <div class="form-group col-md-12">
                     <label>Dokumen</label>
+                   
                     <input name="file_dokumen" type="file" class="form-control" required>
                   </div>
 
@@ -138,6 +139,7 @@
                       <option value="Publish">Publish</option>
                     </select>
                   </div>
+
 
                   <div class="form-group col-md-12">
                     <label>Tanggal Sah</label>

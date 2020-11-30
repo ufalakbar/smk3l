@@ -18,6 +18,36 @@
       <div class="row">
         <!-- left column -->
         <div class="col-md-12">
+          <?php
+          $data2=$this->session->flashdata('message');
+          if($data2!=""){ ?>
+              <div id="pesan-error-flash">
+                  <div class='alert alert-success alert-dismissable'>
+                      <button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;</button>
+                      <strong>  Sukses ! </strong> <?=$data2;?>
+                  </div>
+              </div>
+          <?php } ?>
+           <?php
+          $data3=$this->session->flashdata('edit');
+          if($data3!=""){ ?>
+              <div id="pesan-error-flash">
+                  <div class='alert alert-success alert-dismissable'>
+                      <button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;</button>
+                      <strong>  Sukses ! </strong> <?=$data3;?>
+                  </div>
+              </div>
+          <?php } ?>
+           <?php
+          $data4=$this->session->flashdata('hapus');
+          if($data4!=""){ ?>
+              <div id="pesan-error-flash">
+                  <div class='alert alert-success alert-dismissable'>
+                      <button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;</button>
+                      <strong>  Sukses ! </strong> <?=$data4;?>
+                  </div>
+              </div>
+          <?php } ?>
           <!-- general form elements -->
           <div class="box box-primary">
             <div class="box-header with-border">

@@ -16,7 +16,7 @@
 <div class = "container">
   <div class="wrapper">
     <form action="<?php echo site_url('loginc/proses_login') ?>" method="post" name="Login_Form" class="form-signin">       
-        <h3 class="form-signin-heading">Login SMK3L PT.INTI</h3>
+        <h3 class="form-signin-heading">Login Sistem Repository K3L PT.INTI</h3>
         <hr class="colorgraph"><br>
         <?= $this->session->flashdata('message'); ?>
 
@@ -32,7 +32,7 @@
        
         <button class="btn btn-lg btn-primary btn-block"  name="Submit" value="Login" type="Submit">Login</button><br>
         <div class="text-center">
-         <a class="small" href="">Lupa Password?</a>
+         <!-- <a class="small" href="">Lupa Password?</a> -->
         </div>       
     </form>     
   </div>

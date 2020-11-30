@@ -75,11 +75,11 @@ class Karyawan extends CI_Controller {
              $cek_valid_name = preg_match("/^[a-zA-Z-' ]*$/", $data['nm_karyawan']);
 
             if(strlen((string)$data['nip'])<9){
-                $this->session->set_flashdata('error', "NIP harus lebih dari 9 digit");
+                $this->session->set_flashdata('error', "NIP sudah digunakan / Tidak Valid");
                 redirect('karyawan/manage_data_karyawan');
             }
             if ( !$nip_valid) {
-                $this->session->set_flashdata('error', "NIP sudah digunakan");
+                $this->session->set_flashdata('error', "NIP sudah digunakan / Tidak Valid");
                 redirect('karyawan/manage_data_karyawan');
             } 
             if(!$cek_valid_name){
@@ -87,11 +87,12 @@ class Karyawan extends CI_Controller {
                 redirect("karyawan/manage_data_karyawan");
             }
             if(!filter_var($data['email_karyawan'], FILTER_VALIDATE_EMAIL)){
-                $this->session->set_flashdata('error','Gunakan Nama yang Valid!!');
+                $this->session->set_flashdata('error','Gunakan email yang Valid!!');
                 redirect("karyawan/manage_data_karyawan");
             }
 
             $this->Adminm->insertData('tbl_karyawan',$data);
+            $this->session->set_flashdata('message','Data berhasil ditambah!');
 
         } elseif ($key == '') {
 
@@ -103,6 +104,7 @@ class Karyawan extends CI_Controller {
                 'email_karyawan'=>$this->input->post('email_karyawan'),
             );
             $this->Adminm->updateData('tbl_karyawan',$data,$id);
+             $this->session->set_flashdata('edit','Data berhasil diubah!');
 
         } 
 
@@ -112,6 +114,7 @@ class Karyawan extends CI_Controller {
     function proses_hapus_karyawan(){
         $id['nip'] = $this->uri->segment(3);
         $this->Adminm->deleteData('tbl_karyawan',$id);
+         $this->session->set_flashdata('hapus','Data berhasil dihapus!');
 
         redirect("karyawan");
     }

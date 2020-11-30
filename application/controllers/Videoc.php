@@ -82,6 +82,7 @@ class Videoc extends CI_Controller {
 		            'status_video'=>$this->input->post('status_video'),
 	            );
 		        $this->Adminm->insertData('tbl_video',$data);
+		         $this->session->set_flashdata('message','Data berhasil ditambah!');
 	        }
 
     	} elseif ($key == '') {
