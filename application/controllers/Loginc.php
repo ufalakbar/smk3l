@@ -56,7 +56,7 @@ class Loginc extends CI_Controller {
             return FALSE;
         }
     }
-
+ 
     function download_dokumen($file_dokumen, $id_kategori_dokumen) {
 
         $username = $this->input->post('username');
@@ -64,7 +64,18 @@ class Loginc extends CI_Controller {
         //query the database
         $result = $this->Adminm->login($username, $password);
         if($result) {
-            redirect('uploads/berkas/'.$file_dokumen);            
+            $nip = $this->Adminm->get_user_nip($username);
+            $divisi = $this->Adminm->get_user_division($nip);
+            $not_allowed = $this->Adminm->get_not_allowed_division($id_kategori_dokumen);
+            if($not_allowed ==  $divisi){
+               
+                $this->session->set_flashdata('error','Divisi anda tidak memiliki izin untuk melihat dokumen');
+                redirect('Dokumen/index/'.$id_kategori_dokumen);
+                return FALSE;
+            }
+            else{
+                redirect('uploads/berkas/'.$file_dokumen); 
+            }           
         } else {
             //jika validasi salah
             $this->session->set_flashdata('error','Username atau Password salah');

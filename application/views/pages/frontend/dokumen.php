@@ -127,7 +127,7 @@
 					<!-- Modal -->
 					<div id="myModal<?php echo $row->id_dokumen; ?>" class="modal fade" role="dialog">
 					  <div class="modal-dialog">
-
+ 
 					    <!-- Modal content-->
 					    <div class="modal-content">
 					      <div class="modal-header">

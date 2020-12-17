@@ -459,4 +459,48 @@ class Adminm extends CI_Model{
             return false;
         }
     }
+
+    function get_user_nip($username){
+        $this->db->select('nip');
+        $this->db->from('tbl_user');
+        $this->db->where('username',$username);
+        $this->db->limit(1);
+
+        $query = $this->db->get();
+        $data = array_shift($query->result_array());
+        if($query) {
+            return $data['nip'];
+        } else {
+            return false;
+        }
+    }
+
+    function get_user_division($nip){
+        $this->db->select('divisi');
+        $this->db->from('tbl_karyawan');
+        $this->db->where('nip',$nip);
+        $this->db->limit(1);
+
+        $query = $this->db->get();
+        $data = array_shift($query->result_array());
+        if($query) {
+            return $data['divisi'];
+        } else {
+            return false;
+        }
+    }
+
+    function get_not_allowed_division($id_dokumen){
+        $this->db->select('not_allowed_division');
+        $this->db->from('tbl_kategori_dokumen');
+        $this->db->where('id_kategori_dokumen',$id_dokumen);
+        $query = $this->db->get();
+        $data = array_shift($query->result_array());
+
+        if($query) {
+            return $data['not_allowed_division'];
+        } else {
+            return false;
+        }
+    }
 }
